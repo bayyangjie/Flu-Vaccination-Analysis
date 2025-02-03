@@ -93,27 +93,27 @@ where 1=1
 ## Flu Shots by Age
 Young patients below the ages of 17 and elderly patients above the age of 50 make up the bulk of patients who had gotten flu vaccinations. Majority of patients in all age groups have also gotten flu vaccinations.
 
-<img src="images/flu shots by age.png" width="80%">
+<img src="images/flu shots by age.png" width="100%">
 
 ## Flu Shots by Race
 All patients who are of Native race and Others are all vaccinated with the flu vaccine. Asians are the next group of patients who form the highest. Overall, majority of patients in each race are vaccinated with the flu vaccine.
 
-<img src="images/flu shots by race.png" width="80%">
+<img src="images/flu shots by race.png" width="100%">
 
 ## Flu Shots by County
 Out of all the cities in Masachusetts, Nantucket County holds the highest proportion in terms of amount of residents who have gotten flu vaccinations at 87.5% and Hampshire County has the lowest proportion of residents with flu vaccinations at 75.6%.
 
-<img src="images/flu shots by county.png" wdith="80%">
+<img src="images/flu shots by county.png" wdith="100%">
 
 ## Running Sum of Flu Shots
 Throughout the year, the number of flu vaccinations exhibit a growing upward trend. The steepest increase in flu vaccinations occurreed between the months of February and August. After which, the flu vaccination rate tapered down abit while still showing an increasing trend.
 
-<img src="images/running sum of flu shots.png" width="80%">
+<img src="images/running sum of flu shots.png" width="100%">
 
 # Overall proportion of administered flu shots and vaccinated patients
 Out of the entire population of patients in the dataset, approximately 82% of patients have the flu vaccinations. The total number of flu shots administered is also equal to 493 in the year 2022.
 
-<img src="images/overall.png" width="40%">
+<img src="images/overall.png" width="100%">
 
 # Conclusion
 The development of this dashboard provides a quick overview of patients' flu vaccination status and this can provide many useful benefits for hospital staff such as doctors,clinicians, nurses. 
