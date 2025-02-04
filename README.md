@@ -13,7 +13,9 @@ The dashboard is designed to present comprehensive information regarding flu vac
 
 4. A detailed list of patients indicating their vaccination status regarding flu shots.
 
-The analysis considers only patients who are considered 'active' at the hospital. Some patients might stay far away from the hospital or have moved to a different state with a different healthcare system, thus no longer returning to the hospital for visits. These are some possible reasons that could result in their patient status becoming inactive in the hospital records. And this group of patients are excluded from this analysis. Conditions are set in this analysis to distinguish the active and inactive patients.
+The analysis considers only patients who are considered 'active' at the hospital. Some patients might stay far away from the hospital or have moved to a different state with a different healthcare system, thus no longer returning to the hospital for visits. These are some possible reasons that could result in their patient status becoming inactive in the hospital records. And this group of patients are excluded from this analysis. The conditions are set in this analysis to distinguish active and inactive patients.
+
+Please click [here](https://public.tableau.com/views/AnalysisofFluVaccinations/Dashboard1?:language=en-GB&:sid=&:display_count=n&:origin=viz_share_link) to view the interactive dashboard on my Tableau Public profile.
 
 # Tools used
 The GUI tool pgAdmin4 was employed for the management and interaction with the imported CSV datasets, while Tableau served as the platform for creating the visualizations.
