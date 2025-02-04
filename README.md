@@ -2,25 +2,21 @@
 The dashboard is designed to present comprehensive information regarding flu vaccinations administered in Massachusetts, United States, throughout the year 2022.
 
 1. The overall percentage of patients receiving flu vaccinations, categorized by:
-a. Age group
-b. Racial demographics
-c. County of residence
-d. Aggregate data reflecting both the percentage and total count of individuals who have received the flu vaccine
+* Age group
+* Racial demographics
+* County of residence
+* Aggregated data reflecting both the percentage and total count of individuals who have received the flu vaccine
 
 2. Cumulative total of flu vaccinations administered during the year 2022
+
 3. Total count of flu vaccinations provided in 2022
+
 4. A detailed list of patients indicating their vaccination status regarding flu shots.
 
-The above objectives apply only to active patients at the hospital. Some patients might stay far away from the hospital thus making it inconvenient for them to continue further regular visits to the hospital, resulting in their patient status as inactive in the hospital records. Inactive patients are excluded from the analysis. 
+The analysis considers only patients who are considered 'active' at the hospital. Some patients might stay far away from the hospital or have moved to a different state with a different healthcare system, thus no longer returning to the hospital for visits. These are some possible reasons that could result in their patient status becoming inactive in the hospital records. And this group of patients are excluded from this analysis. Conditions are set in this analysis to distinguish the active and inactive patients.
 
-# Approach
-Using **CREATE TABLE** , four tables are first created in the database while defining the data types of the column variables from the datasets. After which, the tables are populated by importing the datasets. A total of 4 datasets were used for this analysis - Patients, Immunizations, Encounters and Conditions. Verifications are then done to ensure the correct data is being imported into the right table.
-
-PostgreSQL's GUI tool pgadmin4 was used as the tool for managing and interacting with the imported csv datasets. And Tableau was used as the tool for developing the visualisations.
-
-Once the tables are created successfully with the correct data, this is followed by the creation of two CTE tables that are subsequently incorporated together as a subquery filter and in a JOIN statement.
-
-With the finalised joined table containing the new fields created from PostgreSQL, the visualisations created in Tableau then provde a summary of flu shots administered to patients to provide an overview of the distribution of vaccinations. The final dashboard pulls together the visualisations and dynamic filters are also added to allow users to interact with the data.
+# Tools used
+The GUI tool pgAdmin4 was employed for the management and interaction with the imported CSV datasets, while Tableau served as the platform for creating the visualizations.
 
 # About the dataset
 The data used in this analysis is synthetically generated from an open source educational tool, Synthea which consists of mock patient data that simulates those from an actual healthcare database.
@@ -33,7 +29,12 @@ Encounters dataset: Information about the patient's visits such as description o
 
 Immunizations dataset: Contains details about the patients' vaccinations such as patient IDs, vaccination date, description of vaccination received.
 
+# Preparing tables in database
+Using **CREATE TABLE** statement, four tables are first created in the database while defining the data types of the column variables from the datasets. After which, the tables are populated by importing the datasets. A total of 4 datasets were used for this analysis - Patients, Immunizations, Encounters and Conditions. After importing the datasets into pgadmin4, the tables are verified to ensure the data is imported correctly.
+
 # SQL
+In the SQL segment, techniques employed are JOINs, CTEs and Subqueries. 
+
 The query below creates the CTE table 'active_patients' which only pulls patient IDs that satisfy conditions that are stated in the WHERE clause. In this case, the conditions are to only retrieve patients who are still alive, visited the hospital between the start of 2020 and end of 2022 and are 6 months or older.
 ```
 with active_patients as 
@@ -63,11 +64,9 @@ group by patient
 
 A **LEFT JOIN** is used to merge the earliest flu shot dates of the patients with their demograpic information from the 'patients' table, such as their race, age, county location, full names. The **CASE WHEN** clause is used to denote a '1' for patients with a flu vaccination and '0' for patients without a flu vaccination. This helps when performing data manipulation in Tableau to get the number and percentages of patients who got the flu shots vice versa. 
 
-The CTE table 'active_patients' that was created earlier is used a subquery filter with the WHERE clause to return only active, alive and patients who are 6 months or older with the flu vaccinations. 
+The CTE table 'active_patients' that was created earlier is used a subquery filter with the WHERE clause to return only active, alive and patients who are 6 months or older with the flu vaccinations. An 'age' column is also created that returns the ages of patients as of the end of 2022.
 
-An 'age' column is also created to list the ages of patients as of the end of 2022.
-
-The finalised table from this JOIN clause is then loaded into Tableau for the creating the visualisations/dashboard.
+The finalised table from the **LEFT JOIN** is then loaded into Tableau.
 ```
 select  pat.birthdate
 	   ,pat.race
@@ -88,7 +87,7 @@ where 1=1
 	and pat.id in (select patient from active_patients)
 ```
 
-# Tableau Visualisations
+# Tableau
 
 ## Flu Shots by Age
 Young patients below the ages of 17 and elderly patients above the age of 50 make up the bulk of patients who had gotten flu vaccinations. Majority of patients in all age groups have also gotten flu vaccinations.
