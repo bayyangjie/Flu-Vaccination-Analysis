@@ -45,7 +45,7 @@ After directly loading the data, verification is also done to ensure that the da
 # SQL
 The SQL techniques employed in this analysis are JOINs, CTEs and Subqueries. 
 
-The query below creates the CTE table 'active_patients' which only pulls patient IDs that satisfy conditions that are stated in the WHERE clause. In this case, the conditions are to only retrieve patients who are still alive, visited the hospital between the start of 2020 and end of 2022 and are 6 months or older.
+The query belows employs both the use of a CTE table 'active_patients' and subquery. It returns patients who are alive and aged 6 months or older.
 ```
 with active_patients as 
 (
@@ -57,10 +57,9 @@ with active_patients as
 		and pat.deathdate is null
 		and extract(month from age('2022-12-31',pat.birthdate)) >= 6
 )
-
 ```
 
-As there could be patients that received more than one flu vaccinations in the year, the CTE query below creates a table that groups the patients by their unique patient IDs and returns records of the earliest vaccination date individually. This query also specifies the vaccine code '5302' for flu vaccines as well as the timeline period between the first and last day of 2022. 
+As there could be patients that received multiple flu vaccinations in the year, the CTE query below groups the patients by their unique patient IDs and returns records of their earliest vaccination date. This query also specifies the vaccine code '5302' to represent the flu vaccine type and the period for the whole of 2022.
 ```
 flu_shot_2022 as
 (
@@ -72,9 +71,8 @@ group by patient
 )
 ```
 
-A **LEFT JOIN** is used to merge the earliest flu shot dates of the patients with their demograpic information from the 'patients' table, such as their race, age, county location, full names. The **CASE WHEN** clause is used to denote a '1' for patients with a flu vaccination and '0' for patients without a flu vaccination. This helps when performing data manipulation in Tableau to get the number and percentages of patients who got the flu shots vice versa. 
-
-The CTE table 'active_patients' that was created earlier is used a subquery filter with the WHERE clause to return only active, alive and patients who are 6 months or older with the flu vaccinations. An 'age' column is also created that returns the ages of patients as of the end of 2022.
+A **LEFT JOIN** is used to merge the table of patients' earliest flu shot dates "flu_shot_2022" with their demograpic information from the "patients" table. The **CASE WHEN** statement denotes a '1' for vaccinated patients and '0' for non-vaccinated patients. This aids in performing data manipulation in Tableau for obtaining the count and percentages of vaccinated and non-vaccinated patients. 
+An 'age' column is also created for deriving the ages of all patients.
 
 The finalised table from the **LEFT JOIN** is then loaded into Tableau.
 ```
