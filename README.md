@@ -38,7 +38,9 @@ Using **CREATE TABLE** statement, the tables are first created in the database w
 
 <img src="https://github.com/bayyangjie/Healthcare-Analysis/blob/main/images/create_table_2.png?raw=true" width="35%">
 
-After loading the data, verification is done to ensure that the data is imported correctly by querying all columns in each table.
+After directly loading the data, verification is also done to ensure that the data is imported correctly by querying all columns in each table.
+
+<img src="https://github.com/bayyangjie/Healthcare-Analysis/blob/main/images/insert_data.png?raw=true" width="100%">
 
 # SQL
 The SQL techniques employed in this analysis are JOINs, CTEs and Subqueries. 
