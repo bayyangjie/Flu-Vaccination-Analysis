@@ -34,8 +34,12 @@ Immunizations dataset: Contains details about the patients' vaccinations such as
 # Preparing tables in database
 Using **CREATE TABLE** statement, four tables are first created in the database while defining the data types of the column variables from the datasets. After which, the tables are populated by importing the datasets. A total of 4 datasets were used for this analysis - Patients, Immunizations, Encounters and Conditions. After importing the datasets into pgadmin4, the tables are verified to ensure the data is imported correctly.
 
+<img src="https://github.com/bayyangjie/Healthcare-Analysis/blob/main/images/create_table_1.png?raw=true" width="35%">
+
+<img src="https://github.com/bayyangjie/Healthcare-Analysis/blob/main/images/create_table_2.png?raw=true" width="35%">
+
 # SQL
-In the SQL segment, techniques employed are JOINs, CTEs and Subqueries. 
+The SQL techniques employed in this analysis are JOINs, CTEs and Subqueries. 
 
 The query below creates the CTE table 'active_patients' which only pulls patient IDs that satisfy conditions that are stated in the WHERE clause. In this case, the conditions are to only retrieve patients who are still alive, visited the hospital between the start of 2020 and end of 2022 and are 6 months or older.
 ```
