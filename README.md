@@ -32,11 +32,13 @@ Encounters dataset: Information about the patient's visits such as description o
 Immunizations dataset: Contains details about the patients' vaccinations such as patient IDs, vaccination date, description of vaccination received.
 
 # Preparing tables in database
-Using **CREATE TABLE** statement, four tables are first created in the database while defining the data types of the column variables from the datasets. After which, the tables are populated by importing the datasets. A total of 4 datasets were used for this analysis - Patients, Immunizations, Encounters and Conditions. After importing the datasets into pgadmin4, the tables are verified to ensure the data is imported correctly.
+Using **CREATE TABLE** statement, the tables are first created in the database while defining the data types of the column variables from the datasets followed by populating the tables with the actual raw data. A total of 4 datasets were used for this analysis - Patients, Immunizations, Encounters and Conditions. 
 
 <img src="https://github.com/bayyangjie/Healthcare-Analysis/blob/main/images/create_table_1.png?raw=true" width="35%">
 
 <img src="https://github.com/bayyangjie/Healthcare-Analysis/blob/main/images/create_table_2.png?raw=true" width="35%">
+
+After loading the data, verification is done to ensure that the data is imported correctly by querying all columns in each table.
 
 # SQL
 The SQL techniques employed in this analysis are JOINs, CTEs and Subqueries. 
