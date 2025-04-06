@@ -7,7 +7,7 @@ This purpose of this analysis is to present comprehensive information about pati
 * County of residence
 * Aggregated data reflecting both the percentage and total count of individuals who have received the flu vaccine
 
-2. Cumulative total of flu vaccinations administered during the year 2022
+2. Cumulative total of flu vaccinations administered during the year 
 
 3. Total count of flu vaccinations provided in the year
 
