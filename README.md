@@ -1,6 +1,7 @@
 # Objectives
 This purpose of this analysis is to present comprehensive information about patients' flu vaccinations administered in Massachusetts, United States, throughout the year 2022.
 
+## Specifications
 1. The overall percentage of patients receiving flu vaccinations, categorized by:
 * Age group
 * Racial demographics
@@ -11,7 +12,7 @@ This purpose of this analysis is to present comprehensive information about pati
    
 3. Total count of flu vaccinations provided
 
-4. A detailed list of patients indicating their vaccination status regarding flu shots.
+4. A detailed list of patients and their flu vaccination status
 
 The analysis considers only patients who are considered 'active' at the hospital. Some patients might stay far away from the hospital or have moved to a different state with a different healthcare system, thus no longer returning to the hospital for visits. These are some possible reasons that could result in their patient status becoming inactive in the hospital records. And this group of patients are excluded from this analysis. The conditions are set in this analysis to distinguish active and inactive patients.
 
