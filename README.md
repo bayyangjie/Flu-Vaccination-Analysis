@@ -130,7 +130,7 @@ CREATE TABLE patients
 
 Data is loaded into the tables using the Import Data feature in pgadmin4. Verification is also performed to ensure that the data is correctly imported into each table.
 
-<img src="https://github.com/bayyangjie/Healthcare-Analysis/blob/main/images/insert_data.png?raw=true" width="100%">
+<img src="https://github.com/bayyangjie/Flu-Vaccination-Analysis/blob/main/images/insert_data.png?raw=true" width="100%">
 
 # Data Transformation
 CTEs are created while incorporating the use of Subquery and JOINs in the data transformation step. The aim is to encapsulate the complex JOINs & Subqueries into reference objects which are then used to create the final table for use in the Tableau analysis. 
