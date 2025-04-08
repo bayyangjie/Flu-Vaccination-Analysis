@@ -16,7 +16,7 @@
 
 
 # Project Structure
-
+<img src="https://github.com/bayyangjie/Healthcare-Analysis/blob/main/images/%20tree%20structure.png?raw=true" width="50%">
 
 # Objectives
 This analysis aims to present statistical information about patients' flu vaccinations administered in Massachusetts, United States in 2022. 
