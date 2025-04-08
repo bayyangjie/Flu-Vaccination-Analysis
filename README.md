@@ -1,6 +1,7 @@
 # Content 
+- [Project Structure](#project-structure)
 - [Objectives](#objectives)
-  - [Specifications](#specifications)
+  - [Dashboard Specifications](#dashboard-specifications)
 - [Tool used](#tools-used)
 - [Dataset](#dataset)
 - [Data Preparation](#data-preparation)
