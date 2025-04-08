@@ -1,5 +1,21 @@
+# Content 
+- [Objectives](#objectives)
+  - [Specifications](#specifications)
+- [Tool used](#tools-used)
+- [Dataset](#dataset)
+- [Data Preparation](#data-preparation)
+- [Data Transformation](#data-transformation)
+- [Visualization](#visualization)
+  - [Flu Shots by Age](#flu-shots-by-age)
+  - [Flu Shots by Race](#flu-shots-by-race)
+  - [Flu Shots by Country](#flu-shots-by-country)
+  - [Running Sum of Flu Shots](#running-sum-of-flu-shots)
+  - [Overall proportion of administered flu shots and vaccinated patients](#overall-proportion-of-administered-flu-shots-and-vaccinated-patients)
+- [Conclusion](#conclusion)
+- [Suggested Improvements](#suggested-improvements)
+
 # Objectives
-This purpose of this analysis is to present comprehensive information about patients' flu vaccinations administered in Massachusetts, United States, throughout the year 2022.
+This analysis aims to present statistical information about patients' flu vaccinations administered in Massachusetts, United States in 2022. 
 
 ## Specifications
 1. The overall percentage of patients receiving flu vaccinations, categorized by:
@@ -22,7 +38,7 @@ Please click [here](https://public.tableau.com/views/AnalysisofFluVaccinations/D
 * pgAdmin4 - management and interaction with the imported CSV datasets
 * Tableau - generating visualizations
 
-# Datasets
+# Dataset
 The data is generated from Synthea, an open source educational tool which consists of mock patient data simulating an actual healthcare database.
 
 * Patients dataset: Information about the patients such as their birthdate, deathdate, first and last names, race, city etc.
@@ -172,7 +188,7 @@ All patients who are of Native race and Others are all vaccinated with the flu v
 
 <img src="images/flu shots by race.png" width="100%">
 
-### Flu Shots by County
+### Flu Shots by Country
 Out of all the cities in Masachusetts, Nantucket County holds the highest proportion in terms of amount of residents who have gotten flu vaccinations at 87.5% and Hampshire County has the lowest proportion of residents with flu vaccinations at 75.6%.
 
 <img src="images/flu shots by county.png" wdith="100%">
