@@ -14,6 +14,24 @@
 - [Conclusion](#conclusion)
 - [Suggested Improvements](#suggested-improvements)
 
+
+# Project Structure
+├── README.md
+├── dataset
+│   ├── Immunizations.txt
+│   ├── Patients.txt
+│   ├── conditions.txt
+│   └── encounters.txt
+└── images
+    ├── create_table_1.png
+    ├── create_table_2.png
+    ├── flu shots by age.png
+    ├── flu shots by county.png
+    ├── flu shots by race.png
+    ├── insert_data.png
+    ├── overall.png
+    └── running sum of flu shots.png
+
 # Objectives
 This analysis aims to present statistical information about patients' flu vaccinations administered in Massachusetts, United States in 2022. 
 
