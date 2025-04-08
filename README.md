@@ -17,8 +17,8 @@
 # Objectives
 This analysis aims to present statistical information about patients' flu vaccinations administered in Massachusetts, United States in 2022. 
 
-## Specifications
-1. The overall percentage of patients receiving flu vaccinations, categorized by:
+## Dashboard Specifications
+1. The overall percentage of patients receiving flu vaccinations is categorized by:
 * Age group
 * Racial demographics
 * County of residence
@@ -30,7 +30,7 @@ This analysis aims to present statistical information about patients' flu vaccin
 
 4. A detailed list of patients and their flu vaccination status
 
-The analysis considers only patients who are considered 'active' at the hospital. Some patients might stay far away from the hospital or have moved to a different state with a different healthcare system, thus no longer returning to the hospital for visits. These are some possible reasons that could result in their patient status becoming inactive in the hospital records. And this group of patients are excluded from this analysis. The conditions are set in this analysis to distinguish active and inactive patients.
+The analysis considers only patients who are still active in the hospital records. Patients who discontinue visits to the hospital are not considered. Conditions are created in the analysis to also distinguish active and inactive patients.
 
 Please click [here](https://public.tableau.com/views/AnalysisofFluVaccinations/Dashboard1?:language=en-GB&:sid=&:display_count=n&:origin=viz_share_link) to view the interactive dashboard on my Tableau Public profile.
 
@@ -39,18 +39,18 @@ Please click [here](https://public.tableau.com/views/AnalysisofFluVaccinations/D
 * Tableau - generating visualizations
 
 # Dataset
-The data is generated from Synthea, an open source educational tool which consists of mock patient data simulating an actual healthcare database.
+The data is generated from Synthea, an open source educational tool which consists of mock patient data simulating an actual healthcare database. The source data comprises a total of 4 datasets.
 
-* Patients dataset: Information about the patients such as their birthdate, deathdate, first and last names, race, city etc.
+* Patients: Information about the patients such as their birthdate, deathdate, first and last names, race, city etc.
 
-* Conditions dataset: Information about the patient's conditions that he or she is suffering from. This include information such as the period of time the patient has had the condition for, details of the illness/conditions, patien IDs.
+* Conditions: Information about the patient's conditions that he or she is suffering from. This include information such as the period of time the patient has had the condition for, details of the illness/conditions, patien IDs.
 
-* Encounters dataset: Information about the patient's visits such as description of visit, start and end dates/times of each hospital visit, amount paid for each visit, claimed amount, the patient IDs etc.
+* Encounters: Information about the patient's visits such as description of visit, start and end dates/times of each hospital visit, amount paid for each visit, claimed amount, the patient IDs etc.
 
-* Immunizations dataset: Contains details about the patients' vaccinations such as patient IDs, vaccination date, description of vaccination received.
+* Immunizations: Contains details about the patients' vaccinations such as patient IDs, vaccination date, description of vaccination received.
 
 # Data Preparation
-Tables are first prepared in the database and then populated with the actual source data. A total of 4 datasets were used for this analysis - Patients, Immunizations, Encounters and Conditions. 
+The tables are created in the database and the actual source data is then inserted. 
 
 ```SQL
 CREATE TABLE conditions (
