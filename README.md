@@ -50,7 +50,7 @@ The data is generated from Synthea, an open source educational tool which consis
 * Immunizations: Contains details about the patients' vaccinations such as patient IDs, vaccination date, description of vaccination received.
 
 # Data Preparation
-The tables are created in the database and the actual source data is then inserted. 
+The tables are created in the database and the actual source data prior to loading the actual data. 
 
 ```SQL
 CREATE TABLE conditions (
