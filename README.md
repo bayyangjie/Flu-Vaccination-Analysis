@@ -172,7 +172,7 @@ select  pat.birthdate
 	   ,flu.patient
 	   ,case when flu.patient is not null then 1 
 	    else 0
-		end as flu_shot_2022
+		end as flu_shot_2022    -- providing a new name for the result column
 	   ,extract(YEAR FROM age('12-31-2022', birthdate)) as age 
 from patients as pat
 left join flu_shot_2022 as flu
